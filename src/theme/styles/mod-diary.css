@@ -1,0 +1,993 @@
+@import "common.css";
+.mydiary-hd {
+  height: 56px;
+  padding: 0 10px;
+  overflow: hidden;
+  line-height: 56px;
+  color: #333;
+  font-size: 14px
+}
+
+.mydiary-hd .highlight {
+  color: #30b9e2;
+  font-weight: 700
+}
+
+.mydiary-hd .ui-btn {
+  height: 24px;
+  margin-left: 15px;
+  line-height: 24px
+}
+
+.mydiary-title {
+  display: inline-block;
+  height: 56px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 700
+}
+
+.mydiary-title:before {
+  content: "";
+  display: inline-block;
+  width: 29px;
+  height: 28px;
+  margin: 0 10px;
+  background: url(../images/icon_task.png);
+  vertical-align: middle
+}
+
+.mydiary-bd {
+  top: 56px;
+  bottom: 100px;
+  overflow-y: auto
+}
+
+.mydiary-bd,
+.mydiary-ft {
+  position: absolute;
+  left: 0;
+  right: 0
+}
+
+.mydiary-ft {
+  bottom: 0;
+  height: 100px;
+  line-height: 100px;
+  text-align: center
+}
+
+.mydiary-nothing {
+  padding: 165px 0 40px;
+  text-align: center;
+  color: #a8c1d0;
+  line-height: 1
+}
+
+.mydiary-nothing:before {
+  content: "";
+  display: inline-block;
+  width: 112px;
+  height: 128px;
+  margin-bottom: 30px;
+  background: url(../images/icon_nothing.png)
+}
+
+.mydiary-nothing .desc1 {
+  margin-bottom: 20px;
+  font-size: 30px
+}
+
+.mydiary-nothing .desc2 {
+  font-size: 18px
+}
+
+.mydiary-btn-item {
+  padding: 10px;
+  text-align: center
+}
+
+.mydiary-btn-item .ui-btn {
+  margin: 0 15px
+}
+
+.mydiary-list {
+  padding: 0 10px
+}
+
+.mydiary-cell {
+  position: relative;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  background: #fff;
+  border: 1px solid #d2dadf;
+  border-color: #000;
+  border-color: rgba(0, 0, 0, .07);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1)
+}
+
+.mydiary-cell .isTQD,
+.mydiary-cell .notTQD {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 65px;
+  height: 20px;
+  border-radius: 0 0 20px 0;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700
+}
+
+.mydiary-cell .isTQD {
+  background: #30b9e2
+}
+
+.mydiary-cell .notTQD {
+  background: #58d713
+}
+
+.mydiary-cell .btn-delete {
+  position: absolute;
+  top: -11px;
+  right: -11px;
+  width: 30px;
+  height: 30px;
+  background: url(../images/icon_delete.png)
+}
+
+.mydiary-cell .btn-delete:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  opacity: .7
+}
+
+.mydiary-cell .btn-delete:active {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1
+}
+
+.mydiary-row {
+  position: relative;
+  padding: 5px 20px 5px 95px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden
+}
+
+.mydiary-row .TQD-num {
+  display: inline-block;
+  width: 160px
+}
+
+.mydiary-row .TQD-num input {
+  width: 96px
+}
+
+.mydiary-row .total-time {
+  float: right
+}
+
+.mydiary-row .highlight {
+  color: #30b9e2
+}
+
+.mydiary-row .obj-name {
+  display: inline
+}
+
+.mydiary-row .btn-obj-select {
+  position: relative;
+  display: inline-block;
+  width: 270px;
+  height: 25px;
+  border-bottom: 1px solid #c6c6c6;
+  color: #333
+}
+
+.mydiary-row .btn-obj-select:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  width: 24px;
+  height: 23px;
+  background: url(../images/icon_list.png)
+}
+
+.mydiary-row .mydiary-name {
+  width: 510px
+}
+
+.mydiary-ipt {
+  height: 26px;
+  padding: 0 5px;
+  border: 1px solid #e1e1e1;
+  line-height: 26px;
+  font-size: 14px;
+  color: #333;
+  outline: none
+}
+
+.mydiary-ipt:focus {
+  border-color: #30b9e2
+}
+
+.mydiary-lab {
+  position: absolute;
+  left: 20px;
+  top: 5px
+}
+
+.mydiary-link {
+  margin-left: 25px;
+  color: #ff9100;
+  text-decoration: none
+}
+
+.mydiary-link:hover {
+  color: #e68300;
+  text-decoration: underline
+}
+
+.mydiary-link:active {
+  color: #ff9c1a
+}
+
+.article-card {
+  padding: 10px 20px;
+  border: 1px solid #cee4eb;
+  margin-bottom: 10px;
+  background: #f1f9fc;
+  line-height: 24px
+}
+
+.article-card .article-name {
+  font-weight: 700;
+  font-size: 16px
+}
+
+.article-card .article-desc {
+  color: #666
+}
+
+.article-card.TQD {
+  display: inline-block;
+  min-width: 250px;
+  margin-right: 10px;
+  text-align: center
+}
+
+.btn-article {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  margin: 0 30px 10px 0;
+  padding: 0 15px;
+  background: #e8e8e8;
+  border-radius: 2px;
+  color: #666;
+  line-height: 22px
+}
+
+.btn-article.active,
+.btn-article.current,
+.btn-article:hover {
+  background: #30b9e2;
+  color: #fff
+}
+
+.btn-article.current .time {
+  display: block
+}
+
+.btn-article.current:after,
+.btn-article.current:before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  margin-left: -7px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent
+}
+
+.btn-article.current:before {
+  border-bottom: 7px solid #cee4eb
+}
+
+.btn-article.current:after {
+  top: 27px;
+  border-bottom: 7px solid #f1f9fc
+}
+
+.btn-article .time {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding-left: 3px;
+  color: #30b9e2;
+  font-weight: 700
+}
+
+.article-item {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: 1px solid #cee4eb;
+  background: #f1f9fc
+}
+
+.article-cell {
+  margin-right: 30px
+}
+
+.article-cell input {
+  width: 38px;
+  margin: 0 5px;
+  text-align: center
+}
+
+.article-cell.on {
+  font-weight: 700
+}
+
+.article-cell.on input {
+  color: #30b9e2
+}
+
+.article-row {
+  position: relative
+}
+
+.article-row .btn-article.current:after,
+.article-row .btn-article.current:before {
+  display: none
+}
+
+.article-row .addition {
+  position: absolute;
+  right: 0;
+  left: 82px;
+  top: 0
+}
+
+.article-row .addition input {
+  width: 100%;
+  padding: 0 10px;
+  border: 0;
+  border-bottom: 1px solid #c6c6c6;
+  font-size: 14px
+}
+
+.article-row .addition input:focus {
+  border-color: #30b9e2
+}
+
+.article-cell-item {
+  display: inline-block;
+  margin-right: 20px;
+  overflow: hidden;
+  vertical-align: top
+}
+
+.article-cell-item .btn-article {
+  margin-right: 5px
+}
+
+.article-cell-item .mydiary-ipt {
+  width: 38px
+}
+
+.article-cell-item .article-cell-left {
+  float: left;
+  margin-right: 10px
+}
+
+.article-cell-item .article-cell-right {
+  overflow: hidden
+}
+
+.article-cell-item .article-cell-right input {
+  width: 100%;
+  padding: 0 10px;
+  border: 0;
+  font-size: 14px;
+  border-bottom: 1px solid #c6c6c6
+}
+
+.article-cell-item .article-cell-right input:focus {
+  border-color: #30b9e2
+}
+
+.article-cell-item .article-cell-right,
+.article-cell-item .article-cell-time {
+  display: none
+}
+
+.article-cell-item.active {
+  display: block;
+  margin-right: 0
+}
+
+.article-cell-item.active .article-cell-time {
+  display: inline
+}
+
+.article-cell-item.active .article-cell-right {
+  display: block
+}
+
+.article-cell-item.active .btn-article {
+  background: #30b9e2;
+  color: #fff
+}
+
+.task-group {
+  height: 100%;
+  padding: 0 10px;
+  overflow-y: auto
+}
+
+.task-title {
+  height: 56px;
+  line-height: 56px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 700
+}
+
+.task-title:before {
+  content: "";
+  display: inline-block;
+  width: 29px;
+  height: 28px;
+  margin: 0 10px;
+  background: url(../images/icon_task.png);
+  vertical-align: middle
+}
+
+.task-cell {
+  margin-bottom: 10px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #d2dadf;
+  border-color: #000;
+  border-color: rgba(0, 0, 0, .07);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1);
+  font-size: 14px
+}
+
+.task-cell .task-hd {
+  position: relative;
+  height: 56px;
+  margin-bottom: 9px;
+  padding: 9px 0 0 65px;
+  line-height: 24px;
+  color: #333;
+  font-weight: 700;
+  overflow: hidden
+}
+
+.task-cell .task-avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 56px;
+  background: #e4f0ff;
+  border-radius: 50%;
+  overflow: hidden
+}
+
+.task-cell .task-avatar img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top
+}
+
+.task-cell .task-row {
+  padding: 5px 0;
+  line-height: 20px;
+  color: #666
+}
+
+.task-cell .task-lab {
+  color: #333;
+  font-weight: 700
+}
+
+.task-cell .task-ft {
+  padding-top: 10px;
+  text-align: center
+}
+
+.task-name {
+  color: #333;
+  font-weight: 700
+}
+
+.btn-close-task {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 30px;
+  height: 52px;
+  margin-top: -26px;
+  background: #30b9e2 url(../images/icon_arrows.png) no-repeat 50%;
+  border-radius: 0 7px 7px 0
+}
+
+.btn-close-task:hover {
+  background-color: #1fafda
+}
+
+.btn-close-task:active {
+  background-color: #46c1e5
+}
+
+.mod-diary .diary-head {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1002px;
+  height: 82px;
+  background-color: #e2ebf0;
+  border: 1px solid #9bc3df;
+  padding: 0 20px
+}
+
+.mod-diary .diary-head:after {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+  content: ""
+}
+
+.mod-diary .diary-head .calendar-box {
+  display: inline-block;
+  vertical-align: middle;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  background-color: #38a6ed;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer
+}
+
+.mod-diary .diary-head .calendar-box:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  opacity: .8;
+  transition: .3s
+}
+
+.mod-diary .diary-head .calendar-box:before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  margin-top: 11px;
+  display: inline-block;
+  background: url(../images/ui-calendar.png) no-repeat
+}
+
+.mod-diary .diary-head .month-report {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 75px;
+  height: 48px;
+  background-color: #38a6ed;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 4
+}
+
+.mod-diary .diary-head .month-report .report-txt {
+  display: inline-block;
+  width: 75px;
+  height: 100%;
+  padding: 8px 30px 0 5px;
+  line-height: 1.2;
+  font-size: 14px;
+  color: #fff
+}
+
+.mod-diary .diary-head .month-report .report-txt:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  opacity: .8;
+  transition: .3s
+}
+
+.mod-diary .diary-head .month-report .report-txt:after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 11px;
+  right: 8px;
+  display: inline-block;
+  background: url(../images/ui-month-report.png) no-repeat
+}
+
+.mod-diary .diary-head .month-report .report-pop {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  z-index: 4;
+  width: 900px;
+  height: 604px;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 13px 35px 0
+}
+
+.mod-diary .diary-head .month-report .report-pop.hide {
+  display: none
+}
+
+.mod-diary .diary-head .month-report .popwrap {
+  position: relative;
+  width: 100%;
+  height: 100%
+}
+
+.mod-diary .diary-head .month-report .popwrap .detail-data {
+  position: absolute;
+  left: 50%;
+  margin-left: -72px;
+  bottom: 20px;
+  width: 144px
+}
+
+.mod-diary .diary-head .month-report .month-list {
+  width: 830px;
+  height: 40px;
+  line-height: 38px;
+  border-top: 1px solid #b6e0ff;
+  border-left: 23px solid #b6e0ff;
+  border-bottom: 1px solid #b6e0ff;
+  border-right: 23px solid #b6e0ff;
+  border-radius: 4px;
+  background-color: #f7fcff
+}
+
+.mod-diary .diary-head .month-report .year-drop {
+  position: relative;
+  float: left;
+  width: 90px;
+  height: 100%;
+  background-color: #e5f4ff;
+  margin-right: 2px
+}
+
+.mod-diary .diary-head .month-report .year-drop:after {
+  position: absolute;
+  top: 17px;
+  right: 16px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 5px 5px 0;
+  border-style: solid;
+  border-color: #777 transparent transparent
+}
+
+.mod-diary .diary-head .month-report .year-drop .year-list {
+  position: absolute;
+  right: 0;
+  overflow-y: scroll;
+  width: 113px;
+  height: 132px;
+  border: 1px solid #c6c6c6
+}
+
+.mod-diary .diary-head .month-report .year-drop .year-list.hide {
+  display: none
+}
+
+.mod-diary .diary-head .month-report .year-drop .year-item {
+  text-align: left;
+  padding-left: 10px;
+  line-height: 26px;
+  height: 26px;
+  width: 100%;
+  font-size: 14px;
+  color: #333
+}
+
+.mod-diary .diary-head .month-report .year-drop .year-item.on,
+.mod-diary .diary-head .month-report .year-drop .year-item:hover {
+  background-color: #eff6f9
+}
+
+.mod-diary .diary-head .month-report .year-txt {
+  display: block;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #777
+}
+
+.mod-diary .diary-head .month-report .year-txt.on,
+.mod-diary .diary-head .month-report .year-txt:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  opacity: .7;
+  transition: .3s
+}
+
+.mod-diary .diary-head .month-report .month-item {
+  position: relative;
+  list-style: none;
+  float: left;
+  width: 57px;
+  height: 100%;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: .2s
+}
+
+.mod-diary .diary-head .month-report .month-item.on,
+.mod-diary .diary-head .month-report .month-item:hover {
+  background-color: #2ab0e9;
+  color: #fff
+}
+
+.mod-diary .diary-head .month-report .month-item.on:before,
+.mod-diary .diary-head .month-report .month-item:hover:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  border: 4px solid #b6e0ff;
+  width: 58px;
+  height: 46px;
+  border-radius: 8px
+}
+
+.mod-diary .diary-head .month-report .tqd-statis {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  padding-top: 30px
+}
+
+.mod-diary .diary-head .month-report .tqd-statis .title {
+  color: #333;
+  font-size: 18px;
+  font-weight: 700
+}
+
+.mod-diary .diary-head .month-report .tqd-detail {
+  display: inline-block;
+  width: 50%;
+  padding-top: 30px
+}
+
+.mod-diary .diary-head .month-report .tqd-detail .title {
+  color: #333;
+  font-size: 18px;
+  font-weight: 700
+}
+
+.mod-diary .diary-head .pop-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  background: rgba(0, 0, 0, .74);
+  z-index: 3
+}
+
+.mod-diary .diary-head .pop-mask.hide {
+  display: none
+}
+
+.mod-diary .diary-head .diary-detail {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle
+}
+
+.mod-diary .diary-head .diary-detail .dec-line {
+  display: inline-block;
+  width: 760px;
+  z-index: 1;
+  top: 30px;
+  position: absolute;
+  height: 1px;
+  background-color: #a8d7f9;
+  overflow: hidden
+}
+
+.mod-diary .diary-head .diary-item {
+  display: inline-block;
+  position: relative;
+  float: left;
+  margin-left: 25px;
+  width: 90px;
+  height: 60px;
+  border-radius: 8px;
+  border: 1px dashed transparent;
+  cursor: pointer;
+  overflow: hidden
+}
+
+.mod-diary .diary-head .diary-item.on,
+.mod-diary .diary-head .diary-item:hover {
+  background-color: #bfddef;
+  border: 1px dashed #68c2f0
+}
+
+.mod-diary .diary-head .diary-item.on .circle:after,
+.mod-diary .diary-head .diary-item:hover .circle:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #b2ddf7;
+  border-radius: 50%;
+  top: -3px;
+  left: -3px
+}
+
+.mod-diary .diary-head .diary-item .circle {
+  z-index: 2;
+  top: 25px;
+  width: 9px;
+  height: 9px;
+  background-color: #38a6ed;
+  border-radius: 50%
+}
+
+.mod-diary .diary-head .diary-item .circle,
+.mod-diary .diary-head .diary-item .txt-hour {
+  display: inline-block;
+  position: absolute;
+  left: 45px;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%)
+}
+
+.mod-diary .diary-head .diary-item .txt-hour {
+  bottom: 0;
+  color: #38a6ed;
+  font-size: 14px
+}
+
+.mod-diary .diary-head .diary-item .txt-hour.red {
+  color: #f45151
+}
+
+.mod-diary .diary-head .diary-item .txt-date {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 0 2px;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  top: 0;
+  left: 45px;
+  color: #666;
+  font-size: 14px
+}
+
+.mod-diary .finish-main {
+  width: 1002px;
+  min-height: 858px;
+  border: 1px solid #c0d3df;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px 20px 20px
+}
+
+.mod-diary .finish-main .btn-back {
+  display: block;
+  width: 72px;
+  height: 24px;
+  line-height: 24px;
+  padding-left: 15px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  background: url(../images/finish-back.png) no-repeat;
+  transition: .3s
+}
+
+.mod-diary .finish-main .btn-back:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  opacity: .8
+}
+
+.mod-diary .finish-main .warm-tip {
+  display: inline-block;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+  height: 104px;
+  line-height: 104px;
+  margin: 10px auto
+}
+
+.mod-diary .finish-main .warm-tip:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 166px;
+  height: 104px;
+  background: url(../images/finish-ok.png) no-repeat
+}
+
+.mod-diary .finish-main .chart-box {
+  display: inline-block;
+  width: 840px;
+  height: 348px
+}
+
+.mod-diary .finish-main .work-tip .title {
+  font-size: 18px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px
+}
+
+.mod-diary .finish-main .work-tip .content {
+  font-size: 14px;
+  color: #333;
+  font-weight: 700
+}
+
+.mod-diary .finish-main .work-tip .font-blue {
+  color: #30b9e2
+}
+
+.mod-diary .finish-main .work-detail {
+  margin-top: 40px
+}
+
+.mod-diary .finish-main .work-detail .title {
+  width: 330px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  background: url(../images/finish-tip.png) no-repeat;
+  margin: 20px auto
+}
+
+.mod-diary .finish-main .work-detail .work-table tr {
+  height: 50px;
+  line-height: 50px
+}
+
+.mod-diary .finish-main .work-detail .work-table th {
+  background: #eaeff0;
+  color: #333;
+  font-size: 16px
+}
+
+.mod-diary .finish-main .work-detail .work-table td {
+  font-size: 14px;
+  white-space: nowrap;
+  height: 20px;
+  line-height: 20px;
+  border-bottom: 1px solid #e8e8e8
+}
+
+.mod-diary .finish-main .work-detail .work-table .orange-color {
+  color: #ff9100
+}
+
+.mod-diary .finish-main .work-detail .work-table .ui-btn {
+  width: 66px
+}
