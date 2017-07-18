@@ -1,74 +1,144 @@
-.calender-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 316px;
-  border: 1px solid #e4e4e4;
-  background-color: #fff;
-  header {
-    height: 45px;
-    line-height: 45px;
-    font-size: 16px;
-    color: #00b0f0;
-    text-align: center;
-    border-bottom: 1px solid #e4e4e4;
-  }
-  .calender-tool {
-    position: relative;
-    height: 31px;
-    line-height: 31px;
-    font-size: 16px;
-    color: #5a5a5a;
-    text-align: center;
-    .left-arrow {
-      position: absolute;
-      left: 17px;
-      top: 50%;
-      width: 20px;
-      height: 20px;
-      overflow: hidden;
-      text-indent: 1000rem;
-      border: none;
-      background: transparent url('../../../../static/images/com_calendar.png') 0 -290px no-repeat;
-      cursor: pointer;
-      transform: translate(0,-50%);
+.clearfix {
+  _zoom: 1
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.calender {
+  position: relative;
+  float: left;
+  .calender-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 316px;
+    border: 1px solid #e4e4e4;
+    border-radius: 4%;
+    background-color: #fff;
+    z-index: 999;
+    header {
+      height: 45px;
+      line-height: 45px;
+      font-size: 16px;
+      color: #00b0f0;
+      text-align: center;
+      border-bottom: 1px solid #e4e4e4;
     }
-    .right-arrow {
-      position: absolute;
-      right: 17px;
-      top: 50%;
-      width: 20px;
-      height: 20px;
-      overflow: hidden;
-      text-indent: 1000rem;
-      border: none;
-      background: transparent url('../../../../static/images/com_calendar.png') 0 -310px no-repeat;
-      cursor: pointer;
-      transform: translate(0,-50%);
-    }
-  }
-  .calender-body {
-    padding: 5px 17px;
-    .week {
-      margin-bottom: 10px;
-      ul > li{
-        width:40px;
-        height: 27px;
-        line-height: 27px;
-        float: left;
-        text-align: center;
-        font-size: 14px;
-        color: #999 ;
+    .calender-tool {
+      position: relative;
+      height: 31px;
+      line-height: 31px;
+      font-size: 16px;
+      color: #5a5a5a;
+      text-align: center;
+      .left-arrow {
+        position: absolute;
+        left: 17px;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        text-indent: 1000rem;
+        border: none;
+        background: transparent url('../../../../static/images/com_calendar.png') 0 -290px no-repeat;
+        cursor: pointer;
+        transform: translate(0, -50%);
+      }
+      .right-arrow {
+        position: absolute;
+        right: 17px;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        text-indent: 1000rem;
+        border: none;
+        background: transparent url('../../../../static/images/com_calendar.png') 0 -310px no-repeat;
+        cursor: pointer;
+        transform: translate(0, -50%);
+      }
+      .right-arrow:focus, .left-arrow:focus{ outline: none }
+      .right-arrow.disable {
+        background-position: -20px -310px;
+        cursor: default;
       }
     }
-    .calender-item {
-      width: 22px;
-      height: 22px;
-      line-height: 22px;
-      text-align: center;
-      font-size: 14px;
+    .calender-body {
+      padding: 5px 17px 10px 17px;
+      .week {
+        margin-bottom: 10px;
+        ul > li {
+          width: 40px;
+          height: 27px;
+          line-height: 27px;
+          float: left;
+          text-align: center;
+          font-size: 14px;
+          color: #999;
+          list-style: none;
+        }
+      }
+      .calender-box {
+        .calender-item {
+          float: left;
+          width: 40px;
+          height: 35px;
+          line-height: 35px;
+          text-align: center;
+          font-size: 12px;
+          list-style: none;
+          span {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            cursor: pointer;
+            box-sizing: content-box;
+            border-radius: 50%;
+          }
+          span.disabled {
+            color: #dad7d7;
+            cursor: default;
+          }
+          span.normal {  border: 2px solid #00b0f0;  }
+          span.insufficient {  border: 2px solid #ffc06e;  }
+          span.notComplete {  border: 2px solid #f7aaaa;  }
+          span.fillIn {  border: 2px solid #bbb;  }
+        }
+      }
+    }
+    .calender-symbol {
+      padding: 10px 15px;
+      border-top: 1px solid #e4e4e4;
+      span {
+        float: left;
+        margin-right: 3px;
+        height: 16px;
+        line-height: 16px;
+        em {
+          margin-left: 3px;
+          vertical-align: middle;
+        }
+        .symbol {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          line-height: 16px;
+          background: transparent url("../../../../static/images/com_calendar.png") no-repeat scroll;
+          vertical-align: middle;
+        }
+        .symbol.normal { background-position: 0 -274px }
+        .symbol.insufficient { background-position: -16px -274px }
+        .symbol.notComplete { background-position: -32px -274px }
+        .symbol.fillIn { background-position: -48px -274px }
+      }
     }
   }
 }
+
 
 

@@ -5,18 +5,28 @@ import EditableTQDItem from './editableTQDItem'
 import EditableNotTQDItem from './editableNotTQDItem'
 import EditableTaskTQDItem from './editableTaskTQDItem'
 import EditableTaskNotTQDItem from './editableTaskNotTQDItem'
+import Calender from '../calendar/calendar'
 
 export default class Diary extends React.Component {
   static propTypes = {
     isEditable: React.PropTypes.bool.isRequired,
-    diaryList: React.PropTypes.array.isRequired
+    diaryList: React.PropTypes.array.isRequired,
+    calender: React.PropTypes.object.isRequired,
+    toggleCalenderShow: React.PropTypes.func,
+    catchCalenderData: React.PropTypes.func
   }
   render() {
     let data = this.props.diaryList
     let isEditable = this.props.isEditable
+    let {calender, toggleCalenderShow, catchCalenderData} = this.props
     return (
       <div className='mydiary-group'>
         <div className='mydiary-hd'>
+          <Calender
+            calender={calender}
+            toggleShow={toggleCalenderShow}
+            catchData={catchCalenderData}
+          />
           <h3 className='mydiary-title'>我的日志</h3>
           <a href='javascript:;' className='ui-btn'>修改</a>
           <div className='fr'>累计时长：<span className='highlight'>24H</span></div>
